@@ -4,6 +4,8 @@
  */
 package nezet;
 
+import javax.swing.JButton;
+
 /**
  *
  * @author KissKiraLujza(Szf_N_
@@ -16,6 +18,47 @@ public class GUI extends javax.swing.JPanel {
     public GUI() {
         initComponents();
     }
+
+    public JButton getBtn1() {
+        return btn1;
+    }
+
+    public JButton getBtn2() {
+        return btn2;
+    }
+
+    public JButton getBtn3() {
+        return btn3;
+    }
+
+    public JButton getBtn4() {
+        return btn4;
+    }
+
+    public JButton getBtn5() {
+        return btn5;
+    }
+
+    public JButton getBtn6() {
+        return btn6;
+    }
+
+    public JButton getBtn7() {
+        return btn7;
+    }
+
+    public JButton getBtn8() {
+        return btn8;
+    }
+
+    public JButton getBtn9() {
+        return btn9;
+    }
+
+    public JButton getBtnUjJatek() {
+        return btnUjJatek;
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -100,12 +143,11 @@ public class GUI extends javax.swing.JPanel {
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(70, 70, 70)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(152, 152, 152)
+                        .addComponent(btnUjJatek)))
                 .addContainerGap(79, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnUjJatek)
-                .addGap(157, 157, 157))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
