@@ -10,4 +10,6 @@ package vezerlo;
  */
 public class LightOnVezerlo {
     
+    // felugró ablak az indításkor a szabályokról/ játékmenettről
+    
 }
