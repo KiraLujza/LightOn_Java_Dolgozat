@@ -70,8 +70,12 @@ public class GUI_nezet extends javax.swing.JFrame {
     }
 
     public JMenuItem getMnuSzabalyok() {
-    return nmuSzabaly; // ✅ Ez a JMenuItem, amire kattintani lehet
+    return nmuSzabaly; 
 }
+
+    public JMenuItem getMnuKilepes() {
+        return mnuKilepes;
+    }
 
     
 
@@ -266,6 +270,7 @@ public class GUI_nezet extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnUjJatekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUjJatekActionPerformed

@@ -31,6 +31,8 @@ public class LightOnVezerlo {
         nezet.getMnuSzabalyok().addActionListener(e -> szabalyok());
         nezet.getMnuAllapotMent().addActionListener(e -> mentes());
         nezet.getMnuBetolt().addActionListener(e -> betoltes());
+        nezet.getMnuKilepes().addActionListener(e -> kilepes());
+
 
         for (int i = 0; i < gombok.length; i++) {
             final int index = i;
@@ -65,7 +67,7 @@ public class LightOnVezerlo {
 
     private void mentes() {
         try (PrintWriter pw = new PrintWriter("allapot.txt")) {
-            boolean[] lampak = modell.getLampak(); 
+            boolean[] lampak = modell.getLampak();
             for (boolean lampa : lampak) {
                 pw.println(lampa);
             }
@@ -83,11 +85,23 @@ public class LightOnVezerlo {
                 ujLampak[i] = sc.nextBoolean();
                 i++;
             }
-            modell.setLampak(ujLampak); 
+            modell.setLampak(ujLampak);
             frissitNezet();
             JOptionPane.showMessageDialog(nezet, "Állapot betöltve!");
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(nezet, "Hiba a betöltés során!");
+        }
+    }
+
+    private void kilepes() {
+        int valasz = JOptionPane.showConfirmDialog(
+                nezet,
+                "Biztos ki szeretnél lépni?",
+                "Kilépés megerősítése",
+                JOptionPane.YES_NO_OPTION
+        );
+        if (valasz == JOptionPane.YES_OPTION) {
+            System.exit(0);
         }
     }
 
