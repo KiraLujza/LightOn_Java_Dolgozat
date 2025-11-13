@@ -103,6 +103,7 @@ public class GUI_nezet extends javax.swing.JFrame {
         nmuSzabaly = new javax.swing.JMenuItem();
         mnuAllapot = new javax.swing.JMenuItem();
         mnuBetolt = new javax.swing.JMenuItem();
+        mnuKilepes = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -230,6 +231,9 @@ public class GUI_nezet extends javax.swing.JFrame {
         mnuBetolt.setText("Előző játék betöltése");
         mnuMenu.add(mnuBetolt);
 
+        mnuKilepes.setText("Kilépés");
+        mnuMenu.add(mnuKilepes);
+
         jMenuBar1.add(mnuMenu);
 
         setJMenuBar(jMenuBar1);
@@ -319,6 +323,7 @@ public class GUI_nezet extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JMenuItem mnuAllapot;
     private javax.swing.JMenuItem mnuBetolt;
+    private javax.swing.JMenuItem mnuKilepes;
     private javax.swing.JMenu mnuMenu;
     private javax.swing.JMenuItem nmuSzabaly;
     // End of variables declaration//GEN-END:variables

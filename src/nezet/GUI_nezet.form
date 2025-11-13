@@ -29,6 +29,11 @@
                 <Property name="text" type="java.lang.String" value="El&#x151;z&#x151; j&#xe1;t&#xe9;k bet&#xf6;lt&#xe9;se"/>
               </Properties>
             </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="mnuKilepes">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Kil&#xe9;p&#xe9;s"/>
+              </Properties>
+            </MenuItem>
           </SubComponents>
         </Menu>
       </SubComponents>
