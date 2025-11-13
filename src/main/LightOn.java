@@ -10,7 +10,7 @@ public class LightOn {
         java.awt.EventQueue.invokeLater(() -> {
             GUI_nezet gui = new GUI_nezet();
             LightOnModell modell = new LightOnModell();
-            
+            new LightOnVezerlo(gui, modell);
             gui.setVisible(true);
         });
     }

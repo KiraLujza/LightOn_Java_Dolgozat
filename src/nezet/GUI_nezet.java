@@ -6,6 +6,7 @@ package nezet;
 
 import javax.swing.JButton;
 import javax.swing.JMenu;
+import javax.swing.JMenuItem;
 
 /**
  *
@@ -60,13 +61,18 @@ public class GUI_nezet extends javax.swing.JFrame {
         return btnUjJatek;
     }
 
-    public JMenu getMnuAllapotMent() {
-        return mnuAllapotMent;
+    public JMenuItem getMnuAllapotMent() {
+        return mnuAllapot;
     }
 
-    public JMenu getMnuBetolt() {
+    public JMenuItem getMnuBetolt() {
         return mnuBetolt;
     }
+
+    public JMenuItem getMnuSzabalyok() {
+    return nmuSzabaly; // ✅ Ez a JMenuItem, amire kattintani lehet
+}
+
     
 
     /**
@@ -93,9 +99,10 @@ public class GUI_nezet extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         btnUjJatek = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
-        mnuSzabalyok = new javax.swing.JMenu();
-        mnuAllapotMent = new javax.swing.JMenu();
-        mnuBetolt = new javax.swing.JMenu();
+        mnuMenu = new javax.swing.JMenu();
+        nmuSzabaly = new javax.swing.JMenuItem();
+        mnuAllapot = new javax.swing.JMenuItem();
+        mnuBetolt = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -212,14 +219,18 @@ public class GUI_nezet extends javax.swing.JFrame {
             }
         });
 
-        mnuSzabalyok.setText("Szabályok");
-        jMenuBar1.add(mnuSzabalyok);
+        mnuMenu.setText("Menü");
 
-        mnuAllapotMent.setText("Állapot mentése");
-        jMenuBar1.add(mnuAllapotMent);
+        nmuSzabaly.setText("Szabályok");
+        mnuMenu.add(nmuSzabaly);
+
+        mnuAllapot.setText("Állapot mentése");
+        mnuMenu.add(mnuAllapot);
 
         mnuBetolt.setText("Előző játék betöltése");
-        jMenuBar1.add(mnuBetolt);
+        mnuMenu.add(mnuBetolt);
+
+        jMenuBar1.add(mnuMenu);
 
         setJMenuBar(jMenuBar1);
 
@@ -306,8 +317,9 @@ public class GUI_nezet extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JMenu mnuAllapotMent;
-    private javax.swing.JMenu mnuBetolt;
-    private javax.swing.JMenu mnuSzabalyok;
+    private javax.swing.JMenuItem mnuAllapot;
+    private javax.swing.JMenuItem mnuBetolt;
+    private javax.swing.JMenu mnuMenu;
+    private javax.swing.JMenuItem nmuSzabaly;
     // End of variables declaration//GEN-END:variables
 }
