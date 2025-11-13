@@ -3,6 +3,9 @@ package vezerlo;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.PrintWriter;
+import java.util.Scanner;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import modell.LightOnModell;
@@ -26,6 +29,8 @@ public class LightOnVezerlo {
             nezet.getBtn7(), nezet.getBtn8(), nezet.getBtn9()
         };
         nezet.getMnuSzabalyok().addActionListener(e -> szabalyok());
+        nezet.getMnuAllapotMent().addActionListener(e -> mentes());
+        nezet.getMnuBetolt().addActionListener(e -> betoltes());
 
         for (int i = 0; i < gombok.length; i++) {
             final int index = i;
@@ -56,6 +61,34 @@ public class LightOnVezerlo {
                 + "Jó játékot!!!";
 
         JOptionPane.showMessageDialog(nezet, szabaly);
+    }
+
+    private void mentes() {
+        try (PrintWriter pw = new PrintWriter("allapot.txt")) {
+            boolean[] lampak = modell.getLampak(); 
+            for (boolean lampa : lampak) {
+                pw.println(lampa);
+            }
+            JOptionPane.showMessageDialog(nezet, "Állapot elmentve!");
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(nezet, "Hiba a mentés során!");
+        }
+    }
+
+    private void betoltes() {
+        try (Scanner sc = new Scanner(new File("allapot.txt"))) {
+            boolean[] ujLampak = new boolean[9];
+            int i = 0;
+            while (sc.hasNextBoolean() && i < ujLampak.length) {
+                ujLampak[i] = sc.nextBoolean();
+                i++;
+            }
+            modell.setLampak(ujLampak); 
+            frissitNezet();
+            JOptionPane.showMessageDialog(nezet, "Állapot betöltve!");
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(nezet, "Hiba a betöltés során!");
+        }
     }
 
     private void frissitNezet() {

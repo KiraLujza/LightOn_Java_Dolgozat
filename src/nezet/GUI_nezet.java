@@ -85,7 +85,6 @@ public class GUI_nezet extends javax.swing.JFrame {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
-        jMenuItem1 = new javax.swing.JMenuItem();
         jPanel1 = new javax.swing.JPanel();
         btn4 = new javax.swing.JButton();
         btn2 = new javax.swing.JButton();
@@ -104,8 +103,6 @@ public class GUI_nezet extends javax.swing.JFrame {
         mnuAllapot = new javax.swing.JMenuItem();
         mnuBetolt = new javax.swing.JMenuItem();
         mnuKilepes = new javax.swing.JMenuItem();
-
-        jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -319,7 +316,6 @@ public class GUI_nezet extends javax.swing.JFrame {
     private javax.swing.JButton btnUjJatek;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JMenuItem mnuAllapot;
     private javax.swing.JMenuItem mnuBetolt;

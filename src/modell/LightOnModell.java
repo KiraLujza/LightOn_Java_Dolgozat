@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class LightOnModell {
 
-    private boolean[] lampak; // 3x3 rács => 9 elem
-    private final int MERET = 3; // a tábla mérete (3x3)
+    private boolean[] lampak;
+    private final int MERET = 3;
     private Random rnd = new Random();
 
     public LightOnModell() {
@@ -18,7 +18,6 @@ public class LightOnModell {
             lampak[i] = false;
         }
 
-        // véletlenül egy lámpa felkapcsolva
         int index = rnd.nextInt(lampak.length);
         lampak[index] = true;
     }
@@ -31,29 +30,28 @@ public class LightOnModell {
         return lampak;
     }
 
+    public void setLampak(boolean[] ujLampak) {
+        this.lampak = ujLampak;
+    }
+
     public void kapcsol(int index) {
         int sor = index / MERET;
         int oszlop = index % MERET;
 
-        // az adott lámpa váltása
         valt(index);
 
-        // bal oldali
         if (oszlop > 0) {
             valt(index - 1);
         }
 
-        // jobb oldali
         if (oszlop < MERET - 1) {
             valt(index + 1);
         }
 
-        // fölötte
         if (sor > 0) {
             valt(index - MERET);
         }
 
-        // alatta
         if (sor < MERET - 1) {
             valt(index + MERET);
         }
